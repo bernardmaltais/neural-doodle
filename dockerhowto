@@ -1,0 +1,7 @@
+docker tag neural-doodle:gpu bmaltais/neural-doodle:gpu
+
+docker push bmaltais/neural-doodle:gpu
+
+alias doodle="nvidia-docker run -v $(pwd)/samples:/nd/samples -v $(pwd)/frames:/nd/frames -it bmaltais/neural-doodle:gpu"
+
+doodle --help
